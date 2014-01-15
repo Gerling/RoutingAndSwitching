@@ -4,38 +4,49 @@
 # Sweng lish
 
 
-Core  - bästa vid företagetm
-Distrubution: mellan byggnader
-acces -användaren.
 
-Access layer består av end noder som kan vara datorer, skrivare. 
+Core lagret  - bästa vid företaget, det bästa av det bästa. 
+Distrubution lagret -  mellan byggnader
+Acces lagret (Tillgångslagret)  -användaren.
+
+Access lagret består av end noder som kan vara datorer, skrivare. 
 Dem finns på samma nätverk.
-Dem skickar trafik till Distrubtion layer.
+Dem skickar trafik till Distrubtion lagret.
 
-Distrubtion layer, knutpunkt till andra nätverk.
-Vidarförmedlar trafik till ev andra nät och till Core layer. 
+Distrubtion lagret, knutpunkt till andra nätverk.
+Vidarförmedlar trafik till ev andra nät och till Core lagret. 
 Filtrerar trafik , in och utgående -bra säkerhet. : Brandvägg och VLAN filtrering.
 
 Core layer
+"Inom datanät benämns stamnätet ofta med den engelska termen backbone (som ibland till och med översätts till ryggradsnät) och utgör då den centrala delen av ett datornät dit lokala nät ansluts. Byggs ofta med fiberoptik och har ofta hög överföringskapacitet." 
+"En stamnätet eller stamnät (backbone nät) är en del av nätverksinfrastruktur dator som sammanbinder olika delar av nätet, som ger en väg för utbyte av information mellan olika nätverk eller delnät. En ryggrad (backbone nät)  kan knyta ihop olika nätverk i samma byggnad, i olika byggnader i en campusmiljö, eller över stora områden. Normalt är större än de nätverk som är anslutna till ryggradens (backbonens) kapacitet." <-- Wiki
 "Backbonet" Bra prestanda och redundans.
 Transporterar mycket data till olika nätverk, detta sköts av ISP:er ( Internet service Provider, internet leverantören)
-
-
 
 ECNM  - Enterprise composite Network model.
 Delar in nätet efter funktionalitet. 
 1) enterprise campus 2) enterprise edge, 3) SP edge, 4)Remote modules
-
+    * Hänvisar till bilden på novo, hade ej förstoringsglad med mig <.< * ("crtl + nob")
 EdgeDevice:
 Ingång eller utgång ur ECNM modellen. 
 Säkerheten är viktig, Vad är tillåtet att pasera?
 MAn kan välja vilket skydd som passar organisationen bäst, att välja allt som finns är inte bäst - blir en hel del problem. 
 
-Failure Domain - Den del av nätet som påverkas vid ett fel. 
+Failure Domain - Den del av nätet som påverkas vid ett fel. Behöver ibland inte vara hela nätverket, observa vilken del av nätverket som har problem
 
 CSU/DSU ( en typ av modem)
 Kopplas till WAN-länken.
 Framereplace, HDLC , ATM, PPP
+
+
+    Vad är HDLC?
+HDLC står för High-Level Data Link Control och är ett synkront datalänkskiktsprotokoll utvecklat av standardeseringsorganisationen ISO.
+HDLC tillhandahåller både anslutningsorienterade och anslutningslösa tjänster.
+HDLC kan användas för point to multipoint-förbindelser men används nästan exklusivt för point to point-förbindelser med metoden Asynchronous Balanced Mode (ABM). De andra metoderna är Normal Response Mode and Asynchronous Response Mode.
+    Vad är ATM?
+Asynchronous Transfer Mode (ATM) är, enligt ATM Forum, "en telekommunikations begrepp definieras av ANSI och ITU (tidigare CCITT) standarder för transport av ett komplett sortiment av användartrafiken, bland annat röst, data och videosignaler".
+    Vad är PPP?
+I nätverk, Point-to-Point Protocol (PPP) är en datalänkprotokoll som vanligen används vid upprättande av en direkt förbindelse mellan två nätverksnoder. Det kan ge anslutning autentisering, överföring kryptering, och kompression.
 
 Latency, den tid tar att processa trafik från en punkt till en annan.
 ex1, Switchar buffrar paket och kollar om de är skadade desto längre bort i nätet så längre blir problemet, i detta fall Latency. 
@@ -64,19 +75,26 @@ POP - point of presence, vid övergången från WLAN till LAN.
     InternetAcces.
     CPE - Customer Premise Equipment kan lånas av ISPn. 
 
+Om du inte ser samband i texten och inte vet hur du ska komma ihåg kan du gemföra genom lagrerna från inledningen.
+    NOC = CORE det första i arkin
+    IDF = DISTRUBTION andra steget
+    MDF = Sista steget i arkin.
 
 
 Router komponenter och deras funktioner.
 
-CPU - Executes operating system instructions
+CPU= Central processing unit. CPU är hårdvaran i datorn som utför uppdrag av ett datorprogram genom att sköta input/output systemet.
+
 
 RAM (Random acces memory) -Contains the running copy of configuration file. Stores routing table. RAM contents lost when power is off. 
+RAM är arbetsminnet. 
 
 ROM - Holds diagostic software usen when is powered up, stores the router's bootstrap program. 
+Read-only Memory, ofta förkortat ROM, betyder ungefär "endast läsbart minne". Det är inte möjligt att skriva information till minnet eller på annat vis ändra dess innehåll, och det används därför i elektroniska enheter till att lagra programvara avsedd att styra hårdvaran.
 
-NVRAM - Stores startup configuarion. This many include IP adresses. Routing protocol, hostname of router)
+NVRAM - Sköter startup konfiguartionen. Som innehåller IP adresser, routing protokoll, användarnam av routern.
 
-FLash memory - contains the operating system (CISCO IOS vanligast hos ciso)
+Flash memory - Innehåller operativ systemet (CISCO IOS vanligast hos ciso)
 
 Interface - There exist multiple pshyical interface that are used to connect network. ex: Serial interfaces (koppla routers tillsammans) - Ethernet/Fast Ethernet/ Gigabit ethernet interfaces. 
 Managetment interfaces - konfigerar. 
@@ -94,7 +112,8 @@ Cisco IOS (deras egna)
 
 Catalyst OS (Uppköpt av cisco)
     * Finns bara för dem större modellerna
-
+    * Gör automatiskt att kunderna väljer Cisco IOS. 
+    * Tvingar kunderna, köper kunderna och inte bara företaget. 
 
 
 
@@ -194,6 +213,11 @@ har slagit igenom hos alla routrar
  • CDP passar bäst i mindre, rena ”Cisco nät”
  • CDP är känsligt för hackerattacker
 
- BACKBONE VAD ÄR DET.   
+ 
+
+                                Källor:
+                                wikipedia + google translate
+                                Novo
+
  
 
