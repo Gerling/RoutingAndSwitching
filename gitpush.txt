@@ -1,0 +1,7 @@
+ git status
+  2009  git add -A
+   2010  git commit -m "Updates soon"
+    2011  git push
+
+
+

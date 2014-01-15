@@ -1,0 +1,43 @@
+# Studera själv frågor för kap 1 å 2
+# Oliver Gerling
+# Skriver frågat sedan svaret, kommer alltid sådanna frågor på tentatmen
+#
+
+" The enable secret command is used to secure access to which CLI mode?
+        privileged EXEC mode
+
+" There are no boot system commands in a router configuration in NVRAM. What is the fallback sequence that router will use to find an IOS during reload?" 
+            Flash, TFTP server , ROM
+
+Vad är sant om bryggor och switchar 3 sty: (HAHA DATAKOM LATA RIKARD)
+            * En brygga/switchar använder sig av en MAC address tabell
+            * Porten i en switch som kopplas till core-switchen kallas uplink
+            * Dem kan koppla samman nät med olika kabeltyper.
+
+Vilka 2 fördelarfinns det med Lager 2 ethernet switchar om man gemför med hubs?
+            * Filtrerar baserat via MAC addresserna.
+            * Vilket gör samtidiga ram sändningar.
+
+Följande är rätt kommando för att sätta default route!
+            * ip  route 0.0.0.0 0.0.0.0 172.16.2.1.
+
+Vilket kommando används till att kopiera RAM till NVRAM?
+            * copy running-config startup-config 
+
+Tre rätta påståenden till bryggor och switches: 
+            * Båda vidarbefodrar lager2 broadcasts.
+            * Switches har ett högre nummber av portar.
+            * Dem gör vidarbefodrar beslut baserat genom Lager 2 addresserna
+
+3 IOS router kommandon för att felsöka LAN kopplingsproblem
+            * ping, show ip route, showinterfaces
+
+Vilken är anledningen till att en switch aldrig förstå sig på en broadcast addres?
+            *  En broadcast-adress kommer aldrig att vara källan adressen för en ram
+
+
+Hur gör du för att sätta statisk till nätet som 192.168.1.64/27 som nås via 172.17.100.5
+            *  ip route 192.168.1.64 255.255.255.224 172.17.100.5.
+
+En l2 switch är en multiport bridge.
+
